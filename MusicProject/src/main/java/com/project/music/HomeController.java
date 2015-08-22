@@ -60,8 +60,8 @@ public class HomeController {
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 		
 		String formattedDate = dateFormat.format(date);
-		String nameMusic = musicDb.name;
-		model.addAttribute("musicName", nameMusic);
+		//String nameMusic = musicDb.name;
+		//model.addAttribute("musicName", nameMusic);
 		model.addAttribute("serverTime", formattedDate );
 		model.addAttribute("listMusic", listMusic);
 		
@@ -79,7 +79,7 @@ public class HomeController {
 		
 		model.addAttribute("serverTime2", formattedDate );
 		
-		return "home1";
+		return "home";
 	}
 	
 	//Spring Security see this :
