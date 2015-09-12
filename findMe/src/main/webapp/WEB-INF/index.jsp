@@ -8,5 +8,6 @@
 	</head>
 	<body>
 		<h1>Hello : ${name}</h1>
+        <c:out value="${name}" />
 	</body>
 </html>
