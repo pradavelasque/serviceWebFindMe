@@ -1,6 +1,7 @@
 package com.findMe.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -13,8 +14,8 @@ public class ControlleurPosition {
 	
 	private  static String ACCEUILLE_PAGE = "/";
 	
-	@RequestMapping(value = "initialiserPosition", method = RequestMethod.GET)
-	public @ResponseBody Position initialiserPosition(){
+	@RequestMapping(value = "initialiserPosition", method = RequestMethod.POST)
+	public @ResponseBody Position initialiserPosition(@RequestBody Position jsonPosition){
 	
 		Position position = null;
 		
